@@ -252,6 +252,7 @@ bool UI_Read_N_Point(uint8_t cnt, int16_t* values)
 				Step++;
 				changed=true;
 				buz_PlayMelody(sizeof(confirmationMelody)/sizeof(note_t),confirmationMelody);
+				SetLedStateCyclicSequence(Step*2+2,led_data_ConfigNr);
 			}
 		if(GET_KEY_RISING_EDGE(keys,CONFIG_NEXT_KEY))
 			{
