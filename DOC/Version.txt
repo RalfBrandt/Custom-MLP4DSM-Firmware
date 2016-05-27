@@ -1,0 +1,4 @@
+V1.0 Initial Version
+V1.1 Fixed: LED flash count does not change when enternig miltible values
+V1.2 Add: Modell Nr. Send to RF module
+V1.3 Fixed: Modell Nr. not updated when using fast model switch

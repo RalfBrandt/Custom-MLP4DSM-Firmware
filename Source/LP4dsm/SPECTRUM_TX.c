@@ -55,6 +55,11 @@ void tx_SetMode(uint8_t mode)
 	tx_buf[0]=mode;
 }
 
+void tx_SetModelNr(uint8_t Nr)
+{
+	tx_buf[1]=Nr;
+}
+
 void tx_SetBindMode(bool bind)
 {
 	if(bind)
@@ -108,6 +113,7 @@ void tx_Init(void)
 	OUT_CHAN_data[n]=OUT_CHAN_CENTER_VAL;
 	
 	tx_SetMode(ConfigRF_Mode);
+	tx_SetModelNr(Config_ModelNr);
 	tx_ConvertChannelData();
 }
 

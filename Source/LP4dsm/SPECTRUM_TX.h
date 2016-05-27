@@ -37,6 +37,7 @@
 void tx_Init(void);
 void tx_SetChanelData(int16_t value,uint8_t idx);
 void tx_SetRangeCheck(bool rangeCheck);
+void tx_SetModelNr(uint8_t Nr);
 void tx_SetBindMode(bool bind);
 void tx_SetMode(uint8_t mode);
 void tx_Send(void);

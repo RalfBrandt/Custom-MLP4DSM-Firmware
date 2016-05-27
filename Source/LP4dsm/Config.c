@@ -87,6 +87,7 @@ void configSet_ModelNr(uint8_t modell_Nr)
 	/*if(modell_Nr>=MODEL_CONFIG_CNT)
 	return;*/
 	tx_config.modell_Nr=modell_Nr;
+	tx_SetModelNr(tx_config.modell_Nr);
 	ConfigReadModelConfig();
 	if(model_config.ID!=MODEL_CONFIG_ID)
 	{

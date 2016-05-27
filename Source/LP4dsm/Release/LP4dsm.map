@@ -428,7 +428,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1cc0
+.text           0x00000000     0x1cd4
  *(.vectors)
  .vectors       0x00000000       0x34 E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4/crtatmega88p.o
                 0x00000000                __vector_default
@@ -567,194 +567,197 @@ END GROUP
                 0x000003ee       0x1e Config.o
                 0x000003ee                ConfigResetModelConfig
  .text.configSet_ModelNr
-                0x0000040c       0x3c Config.o
+                0x0000040c       0x42 Config.o
                 0x0000040c                configSet_ModelNr
  .text.ConfigResetTxConfig
-                0x00000448       0x5a Config.o
-                0x00000448                ConfigResetTxConfig
+                0x0000044e       0x5a Config.o
+                0x0000044e                ConfigResetTxConfig
  .text.ConfigInit
-                0x000004a2       0x26 Config.o
-                0x000004a2                ConfigInit
- .text.expou    0x000004c8       0x88 curve.o
-                0x000004c8                expou
- .text.expo     0x00000550       0x30 curve.o
-                0x00000550                expo
- .text.Scale    0x00000580       0xa8 curve.o
-                0x00000580                Scale
+                0x000004a8       0x26 Config.o
+                0x000004a8                ConfigInit
+ .text.expou    0x000004ce       0x88 curve.o
+                0x000004ce                expou
+ .text.expo     0x00000556       0x30 curve.o
+                0x00000556                expo
+ .text.Scale    0x00000586       0xa8 curve.o
+                0x00000586                Scale
  .text.ScaleHalf
-                0x00000628       0x16 curve.o
-                0x00000628                ScaleHalf
- .text.Rate     0x0000063e       0x1c curve.o
-                0x0000063e                Rate
+                0x0000062e       0x16 curve.o
+                0x0000062e                ScaleHalf
+ .text.Rate     0x00000644       0x1c curve.o
+                0x00000644                Rate
  .text.curveXpoint
-                0x0000065a       0x38 curve.o
-                0x0000065a                curveXpoint
- .text.mix      0x00000692       0xb6 curve.o
-                0x00000692                mix
+                0x00000660       0x38 curve.o
+                0x00000660                curveXpoint
+ .text.mix      0x00000698       0xb6 curve.o
+                0x00000698                mix
  .text.key_cyclic
-                0x00000748       0x9a KEYS.o
-                0x00000748                key_cyclic
+                0x0000074e       0x9a KEYS.o
+                0x0000074e                key_cyclic
  .text.key_init
-                0x000007e2       0x22 KEYS.o
-                0x000007e2                key_init
+                0x000007e8       0x22 KEYS.o
+                0x000007e8                key_init
  .text.Get_keys
-                0x00000804       0x42 KEYS.o
-                0x00000804                Get_keys
+                0x0000080a       0x42 KEYS.o
+                0x0000080a                Get_keys
  .text.AddLedSequence
-                0x00000846       0x22 LED.o
-                0x00000846                AddLedSequence
+                0x0000084c       0x22 LED.o
+                0x0000084c                AddLedSequence
  .text.SetLedStateFlashing
-                0x00000868       0x18 LED.o
-                0x00000868                SetLedStateFlashing
+                0x0000086e       0x18 LED.o
+                0x0000086e                SetLedStateFlashing
  .text.SetLedStateSolid
-                0x00000880       0x1a LED.o
-                0x00000880                SetLedStateSolid
+                0x00000886       0x1a LED.o
+                0x00000886                SetLedStateSolid
  .text.SetLedStateCyclicSequence
-                0x0000089a       0x2e LED.o
-                0x0000089a                SetLedStateCyclicSequence
- .text.InitLed  0x000008c8       0x22 LED.o
-                0x000008c8                InitLed
+                0x000008a0       0x2e LED.o
+                0x000008a0                SetLedStateCyclicSequence
+ .text.InitLed  0x000008ce       0x22 LED.o
+                0x000008ce                InitLed
  .text.LedCyclic
-                0x000008ea       0x78 LED.o
-                0x000008ea                LedCyclic
+                0x000008f0       0x78 LED.o
+                0x000008f0                LedCyclic
  .text.InitSystem
-                0x00000962       0x38 main.o
-                0x00000962                InitSystem
+                0x00000968       0x38 main.o
+                0x00000968                InitSystem
  .text.startup.main
-                0x0000099a      0x198 main.o
-                0x0000099a                main
+                0x000009a0      0x198 main.o
+                0x000009a0                main
  .text.Model_Init
-                0x00000b32        0xe MODEL.o
-                0x00000b32                Model_Init
+                0x00000b38        0xe MODEL.o
+                0x00000b38                Model_Init
  .text.Model_CheckKeys
-                0x00000b40      0x122 MODEL.o
-                0x00000b40                Model_CheckKeys
+                0x00000b46      0x122 MODEL.o
+                0x00000b46                Model_CheckKeys
  .text.ModelCalculateOutChannelsData
-                0x00000c62      0x258 MODEL.o
-                0x00000c62                ModelCalculateOutChannelsData
+                0x00000c68      0x258 MODEL.o
+                0x00000c68                ModelCalculateOutChannelsData
  .text.ModelGetCannel
-                0x00000eba       0x2a MODEL.o
-                0x00000eba                ModelGetCannel
+                0x00000ec0       0x2a MODEL.o
+                0x00000ec0                ModelGetCannel
  .text.tx_SetChanelData
-                0x00000ee4       0x2c SPECTRUM_TX.o
-                0x00000ee4                tx_SetChanelData
+                0x00000eea       0x2c SPECTRUM_TX.o
+                0x00000eea                tx_SetChanelData
  .text.tx_SetMode
-                0x00000f10        0x6 SPECTRUM_TX.o
-                0x00000f10                tx_SetMode
+                0x00000f16        0x6 SPECTRUM_TX.o
+                0x00000f16                tx_SetMode
+ .text.tx_SetModelNr
+                0x00000f1c        0x6 SPECTRUM_TX.o
+                0x00000f1c                tx_SetModelNr
  .text.tx_SetBindMode
-                0x00000f16       0x14 SPECTRUM_TX.o
-                0x00000f16                tx_SetBindMode
+                0x00000f22       0x14 SPECTRUM_TX.o
+                0x00000f22                tx_SetBindMode
  .text.tx_SetRangeCheck
-                0x00000f2a       0x14 SPECTRUM_TX.o
-                0x00000f2a                tx_SetRangeCheck
+                0x00000f36       0x14 SPECTRUM_TX.o
+                0x00000f36                tx_SetRangeCheck
  .text.tx_ConvertChannelData
-                0x00000f3e       0x36 SPECTRUM_TX.o
-                0x00000f3e                tx_ConvertChannelData
- .text.tx_Init  0x00000f74       0x4a SPECTRUM_TX.o
-                0x00000f74                tx_Init
+                0x00000f4a       0x36 SPECTRUM_TX.o
+                0x00000f4a                tx_ConvertChannelData
+ .text.tx_Init  0x00000f80       0x52 SPECTRUM_TX.o
+                0x00000f80                tx_Init
  .text.__vector_19
-                0x00000fbe       0x54 SPECTRUM_TX.o
-                0x00000fbe                __vector_19
+                0x00000fd2       0x54 SPECTRUM_TX.o
+                0x00000fd2                __vector_19
  .text.SendTX_Buf
-                0x00001012       0x3e SPECTRUM_TX.o
-                0x00001012                SendTX_Buf
- .text.tx_Send  0x00001050        0xa SPECTRUM_TX.o
-                0x00001050                tx_Send
+                0x00001026       0x3e SPECTRUM_TX.o
+                0x00001026                SendTX_Buf
+ .text.tx_Send  0x00001064        0xa SPECTRUM_TX.o
+                0x00001064                tx_Send
  .text.getRawStickValue
-                0x0000105a       0x4e STICKS.o
-                0x0000105a                getRawStickValue
+                0x0000106e       0x4e STICKS.o
+                0x0000106e                getRawStickValue
  .text.getStickValue
-                0x000010a8       0x6a STICKS.o
-                0x000010a8                getStickValue
+                0x000010bc       0x6a STICKS.o
+                0x000010bc                getStickValue
  .text.StickTrimUp
-                0x00001112       0x54 STICKS.o
-                0x00001112                StickTrimUp
+                0x00001126       0x54 STICKS.o
+                0x00001126                StickTrimUp
  .text.StickTrimDown
-                0x00001166       0x54 STICKS.o
-                0x00001166                StickTrimDown
+                0x0000117a       0x54 STICKS.o
+                0x0000117a                StickTrimDown
  .text.initTimer
-                0x000011ba       0x42 TIMER.o
-                0x000011ba                initTimer
+                0x000011ce       0x42 TIMER.o
+                0x000011ce                initTimer
  .text.__vector_12
-                0x000011fc       0x68 TIMER.o
-                0x000011fc                __vector_12
+                0x00001210       0x68 TIMER.o
+                0x00001210                __vector_12
  .text.__vector_11
-                0x00001264       0xc6 TIMER.o
-                0x00001264                __vector_11
- .text.UI_init  0x0000132a        0xa USER_IF.o
-                0x0000132a                UI_init
+                0x00001278       0xc6 TIMER.o
+                0x00001278                __vector_11
+ .text.UI_init  0x0000133e        0xa USER_IF.o
+                0x0000133e                UI_init
  .text.UI_CheckR_Stick_ModelSelect
-                0x00001334       0x32 USER_IF.o
-                0x00001334                UI_CheckR_Stick_ModelSelect
+                0x00001348       0x32 USER_IF.o
+                0x00001348                UI_CheckR_Stick_ModelSelect
  .text.UI_CheckOptionConfig
-                0x00001366      0x132 USER_IF.o
-                0x00001366                UI_CheckOptionConfig
+                0x0000137a      0x132 USER_IF.o
+                0x0000137a                UI_CheckOptionConfig
  .text.UI_Read_N_Point
-                0x00001498      0x188 USER_IF.o
-                0x00001498                UI_Read_N_Point
+                0x000014ac      0x188 USER_IF.o
+                0x000014ac                UI_Read_N_Point
  .text.UI_CheckGesture
-                0x00001620       0xca USER_IF.o
-                0x00001620                UI_CheckGesture
+                0x00001634       0xca USER_IF.o
+                0x00001634                UI_CheckGesture
  .text.ReadSticks
-                0x000016ea       0xf6 USER_IF.o
-                0x000016ea                ReadSticks
+                0x000016fe       0xf6 USER_IF.o
+                0x000016fe                ReadSticks
  .text.UI_ProceedConfigMode2
-                0x000017e0      0x13e USER_IF.o
-                0x000017e0                UI_ProceedConfigMode2
+                0x000017f4      0x13e USER_IF.o
+                0x000017f4                UI_ProceedConfigMode2
  .text.UI_ProceedConfigMode
-                0x0000191e      0x1e6 USER_IF.o
-                0x0000191e                UI_ProceedConfigMode
+                0x00001932      0x1e6 USER_IF.o
+                0x00001932                UI_ProceedConfigMode
  .text.UI_CheckForConfig
-                0x00001b04       0x42 USER_IF.o
-                0x00001b04                UI_CheckForConfig
+                0x00001b18       0x42 USER_IF.o
+                0x00001b18                UI_CheckForConfig
  .text.UI_checkforStartupGesture
-                0x00001b46        0x6 USER_IF.o
-                0x00001b46                UI_checkforStartupGesture
+                0x00001b5a        0x6 USER_IF.o
+                0x00001b5a                UI_checkforStartupGesture
  .text.libgcc.div
-                0x00001b4c       0x26 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
-                0x00001b4c                _div
-                0x00001b4c                __divmodhi4
+                0x00001b60       0x26 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
+                0x00001b60                _div
+                0x00001b60                __divmodhi4
  .text.libgcc.div
-                0x00001b72       0x44 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodsi4.o)
-                0x00001b72                __udivmodsi4
+                0x00001b86       0x44 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodsi4.o)
+                0x00001b86                __udivmodsi4
  .text.libgcc.div
-                0x00001bb6       0x28 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodsi4.o)
-                0x00001bb6                __divmodsi4
+                0x00001bca       0x28 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodsi4.o)
+                0x00001bca                __divmodsi4
  .text.libgcc.div
-                0x00001bde       0x10 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_negsi2.o)
-                0x00001bde                __negsi2
+                0x00001bf2       0x10 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_negsi2.o)
+                0x00001bf2                __negsi2
  .text.libgcc.mul
-                0x00001bee        0xc e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_mulhisi3.o)
-                0x00001bee                __mulhisi3
+                0x00001c02        0xc e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_mulhisi3.o)
+                0x00001c02                __mulhisi3
  .text.libgcc.mul
-                0x00001bfa       0x18 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_umulhisi3.o)
-                0x00001bfa                __umulhisi3
+                0x00001c0e       0x18 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_umulhisi3.o)
+                0x00001c0e                __umulhisi3
  .text.libgcc.mul
-                0x00001c12        0xc e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_usmulhisi3.o)
-                0x00001c12                __usmulhisi3
-                0x00001c14                __usmulhisi3_tail
+                0x00001c26        0xc e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_usmulhisi3.o)
+                0x00001c26                __usmulhisi3
+                0x00001c28                __usmulhisi3_tail
  .text.libgcc.mul
-                0x00001c1e       0x14 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_muluhisi3.o)
-                0x00001c1e                __muluhisi3
+                0x00001c32       0x14 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_muluhisi3.o)
+                0x00001c32                __muluhisi3
  .text.libgcc.div
-                0x00001c32       0x28 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
-                0x00001c32                __udivmodhi4
+                0x00001c46       0x28 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
+                0x00001c46                __udivmodhi4
  .text.avr-libc
-                0x00001c5a       0x20 E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eerd_block.o)
-                0x00001c5a                eeprom_read_block
-                0x00001c5e                eeprom_read_blraw
+                0x00001c6e       0x20 E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eerd_block.o)
+                0x00001c6e                eeprom_read_block
+                0x00001c72                eeprom_read_blraw
  .text.avr-libc
-                0x00001c7a       0x1e E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eeupd_block.o)
-                0x00001c7a                eeprom_update_block
+                0x00001c8e       0x1e E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eeupd_block.o)
+                0x00001c8e                eeprom_update_block
  .text.avr-libc
-                0x00001c98       0x24 E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eeupd_byte.o)
-                0x00001c98                eeprom_update_byte
-                0x00001c9a                eeprom_update_r18
-                0x00001cbc                . = ALIGN (0x2)
+                0x00001cac       0x24 E:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega88p/avr4\libatmega88p.a(eeupd_byte.o)
+                0x00001cac                eeprom_update_byte
+                0x00001cae                eeprom_update_r18
+                0x00001cd0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001cbc        0x0 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
-                0x00001cbc                _exit
-                0x00001cbc                exit
+ .fini9         0x00001cd0        0x0 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
+                0x00001cd0                _exit
+                0x00001cd0                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -773,11 +776,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001cbc        0x4 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
+ .fini0         0x00001cd0        0x4 e:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x00001cc0                _etext = .
+                0x00001cd4                _etext = .
 
-.data           0x00800100      0x1dc load address 0x00001cc0
+.data           0x00800100      0x1dc load address 0x00001cd4
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -906,8 +909,8 @@ END GROUP
                 0x00800445                r_stick_pos
                 0x00800446                l_stick_pos
                 0x00800447                PROVIDE (__bss_end, .)
-                0x00001cc0                __data_load_start = LOADADDR (.data)
-                0x00001e9c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001cd4                __data_load_start = LOADADDR (.data)
+                0x00001eb0                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800447        0x0
                 0x00800447                PROVIDE (__noinit_start, .)
