@@ -6,9 +6,11 @@
 #define F_CPU 4194304UL
 #endif
 
-#define UPDATE_RATE 22UL  //22ms
+#define UPDATE_RATE11MS 11UL  //11ms
+#define UPDATE_RATE22MS 22UL  //11ms
 #define TICK_RATE 1000	  //1 ms
-#define UPDATE_CNT  ((F_CPU*UPDATE_RATE)/1000) //ticks per 22ms
+#define UPDATE_CNT11MS  ((F_CPU*UPDATE_RATE11MS)/1000) //ticks per 11ms
+#define UPDATE_CNT22MS  ((F_CPU*UPDATE_RATE22MS)/1000) //ticks per 11ms
 #define SEND_ON_IRQ 1 //must be on, otherwise there is to much jitter. must make sure that send on IRQ will give the main program enouth time for the calculations
 
 //includes *********************************************************************

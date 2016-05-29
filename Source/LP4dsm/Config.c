@@ -57,12 +57,18 @@ void ConfigInit(void)
 
 void configSet_Tx_options(uint8_t Nr,bool value)
 {
-	if(Nr>7)
-	return;
 	if(value)
 		tx_config.options|=(1<<Nr);
 	else
 		tx_config.options&=~(1<<Nr);
+}
+
+void configSet_Rx_options(uint8_t Nr,bool value)
+{
+	if(value)
+	model_config.options|=(1<<Nr);
+	else
+	model_config.options&=~(1<<Nr);
 }
 
 //write functions for tx config

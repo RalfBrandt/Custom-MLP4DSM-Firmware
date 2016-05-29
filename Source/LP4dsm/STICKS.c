@@ -58,7 +58,7 @@ int16_t getStickValue(uint8_t Nr)
 		out_val=CHAN_CENTER_VALUE+ScaleHalf(center_in,CHAN_MAX_VALUE,value);
 //		out_val=Scale(center_in,CHAN_MAX_VALUE,CHAN_CENTER_VALUE,CHAN_MAX_VALUE,value);
 	}
-	if(CONFIG_GET_TX_OPTIONS(adc_chanel))
+	if(CONFIG_GET_RX_OPTIONS(adc_chanel))
 		out_val=-out_val;
 	return out_val;
 }

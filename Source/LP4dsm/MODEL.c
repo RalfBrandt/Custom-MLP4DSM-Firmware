@@ -57,6 +57,8 @@ inline void CheckTrimKeys(uint32_t keys)
 }
 
 
+extern uint8_t bind;		//true if bind is selected
+
 void Model_CheckKeys(uint32_t keys)
 {
 	bool changed=false;
@@ -70,7 +72,8 @@ void Model_CheckKeys(uint32_t keys)
 			{
 				confirm.cnt=B6_CNT;
 			}
-		buz_PlayNote(confirm);
+		if(!bind)
+			buz_PlayNote(confirm);
 		changed=true;
 	}
 	if(changed)
@@ -88,14 +91,16 @@ void Model_CheckKeys(uint32_t keys)
 		if(bind_status)
 		{
 		note_t confirm={OCT8,FS8_CNT,NOTE_DURATION(32,120)};
-		buz_PlayNote(confirm);
+		if(!bind)
+			buz_PlayNote(confirm);
 		}
 	}
 	else if(GET_KEY_RISING_EDGE(keys,KEY_BIND_BTN))
 	{
 		thr_cut=!thr_cut;
 		note_t confirm={OCT6,FS6_CNT,NOTE_DURATION(8,60)};
-		buz_PlayNote(confirm);
+		if(!bind)
+			buz_PlayNote(confirm);
 		changed=true;
 	}
 	

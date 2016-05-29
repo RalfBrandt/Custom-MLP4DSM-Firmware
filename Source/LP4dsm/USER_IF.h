@@ -1,13 +1,6 @@
 #ifndef USER_IF_H
 #define USER_IF_H
 
-//defines
-#define TX_OPTION_CH1_INVERT 0
-#define TX_OPTION_CH2_INVERT 1
-#define TX_OPTION_CH3_INVERT 2
-#define TX_OPTION_CH4_INVERT 3
-#define TX_OPTION_FAST_MODEL_SELECT 4
-#define TX_OPTION_CONFIG_WHILE_RUNNIG 5
 
 #define CONFIG_SAVE_KEY KEY_LEFT_HRIZ_TRIM_M //key used to save changed config
 #define CONFIG_CHECK_KEY KEY_LEFT_VERT_TRIM_P //key used to check for Stick position and read value
@@ -52,6 +45,8 @@
 #define R_STICK_EXP_POS STICK_LOWER_RIGHT //configure expo,rate gyro gain standard mode
 #define R_STICK_RATE_POS STICK_LOWER_LEFT //configure expo,rate gyro gain standard mode
 #define R_STICK_GYRO_POS STICK_CENTER_LEFT //configure expo,rate gyro gain stunt mode
+#define R_STICK_11MS_POS STICK_UPPER_CENTER  //11 ms update rate
+#define R_STICK_22MS_POS STICK_LOWER_CENTER  //22 ms update rate
 
 #define STICK_INC_STEP ((5L*CHAN_RANGE)/100)
 #define FLIGHT_TIME_STEP 15

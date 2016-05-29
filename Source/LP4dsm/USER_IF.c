@@ -357,6 +357,18 @@ inline bool UI_Read_Two_Point(int16_t* values)
 			return true;
 			}
 		break;
+		case R_STICK_11MS_POS:
+			model_config_changed=true;
+			configSet_Rx_options(RX_OPTION_11MS,true);
+			TimerSetUpdateIntervall();
+			return true;
+		break;
+		case R_STICK_22MS_POS:
+			model_config_changed=true;
+			configSet_Rx_options(RX_OPTION_11MS,false);
+			TimerSetUpdateIntervall();
+		return true;
+		break;
 		}
 	return false;
 }
@@ -423,35 +435,35 @@ bool UI_ProceedConfigMode2(uint16_t keys)
 				switch (keys)
 				{
 					case (1<<KEY_LEFT_VERT_TRIM_M):
-						configSet_Tx_options(IN_LEFT_VERT_CH,true);
+						configSet_Rx_options(IN_LEFT_VERT_CH,true);
 						done=true;
 					break;
 					case (1<<KEY_LEFT_VERT_TRIM_P):
-						configSet_Tx_options(IN_LEFT_VERT_CH,false);
+						configSet_Rx_options(IN_LEFT_VERT_CH,false);
 						done=true;
 					break;
 					case (1<<KEY_RIGHT_VERT_TRIM_M):
-						configSet_Tx_options(IN_RIGHT_VERT_CH,true);
+						configSet_Rx_options(IN_RIGHT_VERT_CH,true);
 						done=true;
 					break;
 					case (1<<KEY_RIGHT_VERT_TRIM_P):
-						configSet_Tx_options(IN_RIGHT_VERT_CH,false);
+						configSet_Rx_options(IN_RIGHT_VERT_CH,false);
 						done=true;
 					break;
 					case (1<<KEY_LEFT_HRIZ_TRIM_M):
-						configSet_Tx_options(IN_LEFT_HRIZ_CH,true);
+						configSet_Rx_options(IN_LEFT_HRIZ_CH,true);
 						done=true;
 					break;
 					case (1<<KEY_LEFT_HRIZ_TRIM_P):
-						configSet_Tx_options(IN_LEFT_HRIZ_CH,false);
+						configSet_Rx_options(IN_LEFT_HRIZ_CH,false);
 						done=true;
 					break;
 					case (1<<KEY_RIGHT_HRIZ_TRIM_M):
-						configSet_Tx_options(IN_RIGHT_HRIZ_CH,true);
+						configSet_Rx_options(IN_RIGHT_HRIZ_CH,true);
 						done=true;
 					break;
 					case (1<<KEY_RIGHT_HRIZ_TRIM_P):
-						configSet_Tx_options(IN_RIGHT_HRIZ_CH,false);
+						configSet_Rx_options(IN_RIGHT_HRIZ_CH,false);
 						done=true;
 					break;
 				}

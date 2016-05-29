@@ -32,8 +32,8 @@
 #define RATE_IDX_RUDD (OUT_RUDD_CH-FIRST_RATE_CH)
 
 
-#define TX_CONFIG_ID ( (((uint32_t)'T')<<24)|(((uint32_t)'X')<<16)|0x201)
-#define MODEL_CONFIG_ID ( (((uint32_t)'M')<<24)|(((uint32_t)'O')<<16)|0x205)
+#define TX_CONFIG_ID ( (((uint32_t)'T')<<24)|(((uint32_t)'X')<<16)|0x202)
+#define MODEL_CONFIG_ID ( (((uint32_t)'M')<<24)|(((uint32_t)'O')<<16)|0x206)
 
 #define CONFIG_CALIB_CNT 3
 #define CONFIG_CALIB_MIN 0
@@ -48,6 +48,16 @@
 		
 #define MODEL_CONFIG_CLASIC_DEFAULT {MODEL_CONFIG_ID,MODEL_TYPE_CLASIC,DEFAULT_RF_MODE,DEFAULT_MODEL_OPTIONS,DEFAULT_TRIM,DEFAULT_FLIGHT_TIME_CLASIC,\
 		DEFAULT_GYRO_GAIN_CLASSIC,DEFAULT_EXPO_CLASSIC,DEFAULT_RATE_CLASSIC,}
+
+#define RX_OPTION_CH1_INVERT 0
+#define RX_OPTION_CH2_INVERT 1
+#define RX_OPTION_CH3_INVERT 2
+#define RX_OPTION_CH4_INVERT 3
+#define RX_OPTION_11MS		 4
+
+#define TX_OPTION_FAST_MODEL_SELECT 0
+#define TX_OPTION_CONFIG_WHILE_RUNNIG 1
+
 
 typedef struct 
 	{
@@ -116,13 +126,14 @@ void ConfigSaveTrim(void);
 #define ConfigRF_Mode (model_config.rf_mode)
 #define Config_ModelNr (tx_config.modell_Nr)
 #define Config_FlightTime (model_config.FlightTimeLimit)
-#define CONFIG_GET_TX_OPTIONS(Nr) ((Nr>7)?false:((tx_config.options&(1<<Nr))?true:false))
-//#define CONFIG_GET_TX_OPTIONS(Nr) configGet_Tx_option(Nr)
+#define CONFIG_GET_TX_OPTIONS(Nr) ((tx_config.options&(1<<Nr))?true:false)
+#define CONFIG_GET_RX_OPTIONS(Nr) ((model_config.options&(1<<Nr))?true:false)
 // functions for configuration access
 void ConfigSetStic_Mode(uint8_t mode);
 void ConfigSetRF_Mode(uint8_t mode);
 void configSet_ModelNr(uint8_t modell_Nr);
 void configSet_Tx_options(uint8_t Nr,bool value);
+void configSet_Rx_options(uint8_t Nr,bool value);
 
 
 

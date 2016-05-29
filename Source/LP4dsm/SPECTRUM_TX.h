@@ -7,8 +7,8 @@
 #define BAUD_PRESCALE ((( F_CPU / ( USART_BAUDRATE * 16UL ))) - 1)
 
 //out channel to rf Module
-#define TX_LEN 14
 #define OUT_CHAN_CNT 6		//number of channel supported by RF module
+#define TX_LEN (OUT_CHAN_CNT*2+2)
 #define OUT_CHAN_RESOLUTION 10 //bits
 #define OUT_CHAN_MAX_VAL ((1<<OUT_CHAN_RESOLUTION)-1)
 #define OUT_CHAN_CENTER_VAL (1<<(OUT_CHAN_RESOLUTION-1))

@@ -14,13 +14,13 @@ France mode, range test:      20 00 AA AA BB BB CC CC DD DD EE EE FF FF
 France mode, bind:            80 00 00 00 05 FF 09 FF 0D FF 10 AA 14 AA
 
 bit 7 - 1 -> bind mode enable
-bit 6 - unknown, always 0
+bit 6 - unknown, always 0 (USA?)
 bit 5 - 1 -> range test enable
 bit 4 - 1 -> normal mode, 0 -> france mode
 bit 3 - 1 -> DSMX enable
 bit 2 - unknown, always 0
 bit 1 - unknown, always 0
-bit 0 - unknown, always 0
+bit 0 - unknown, always 0 
 
 Note:
 The manual says that in france mode DSMX cannot be enabled.
@@ -84,6 +84,7 @@ void tx_SetRangeCheck(bool rangeCheck)
 	}
 }
 
+
 //convert data from chanal_data into bytes for tx buffer
 void tx_ConvertChannelData(void)
 {
@@ -93,7 +94,7 @@ void tx_ConvertChannelData(void)
 		uint8_t mask=(((1<<OUT_CHAN_RESOLUTION)-1)>>8);
 		tx_buf[n*2+2] =  ((val >> 8) & mask);
 		tx_buf[n*2+3] = (val  & 0xff);
-		tx_buf[n*2+2] |=(n<<(OUT_CHAN_RESOLUTION-8));
+			tx_buf[n*2+2] |=(n<<(OUT_CHAN_RESOLUTION-8));
 	}
 }
 
@@ -141,6 +142,7 @@ void SendTX_Buf(void)
 	}
 	UCSR0B |= (1<<UDRIE0); //Data Register Empty Interrupt enable,
 }
+
 
 
 void tx_Send(void)

@@ -2,13 +2,13 @@
 #include "analog.h"
 
 //global data ****************************************************************************
- uint16_t adc_data[OVERSAMPLE_CNT+1][ADC_CHANEL_CNT];	//the data captured by ADC plus 1 from las cycle for derivation
- uint8_t adc_ch_idx; //ADC channel index
-  uint8_t adc_samp_idx; //the sample index (oversampling)
- int16_t adc_avg[ADC_OUT_CHANEL_CNT]; //the averaged data from ADC
+uint16_t adc_data[OVERSAMPLE_CNT+1][ADC_CHANEL_CNT];	//the data captured by ADC plus 1 from las cycle for derivation
+uint8_t adc_ch_idx; //ADC channel index
+uint8_t adc_samp_idx; //the sample index (oversampling)
+int16_t adc_avg[ADC_OUT_CHANEL_CNT]; //the averaged data from ADC
 volatile bool adc_new_data;
 const uint8_t ch_map[ADC_CHANEL_CNT]={IN_RV1_CH,IN_RV2_CH,IN_RV4_CH,IN_RV3_CH};
-
+uint8_t adc_tick;
 
 //initialize the adc and related data
 void AdcInit(void)
@@ -25,7 +25,7 @@ void AdcInit(void)
 	adc_ch_idx=0;
 	adc_samp_idx=0;
 	adc_new_data=0;
-
+	adc_tick=0;
 	//setup the ADC
 	DIDR0=(1<<ADC0D)|(1<<ADC1D)|(1<<ADC4D)|(1<<ADC5D); //disable digital input on ADC channels
 	ADMUX=(1<<REFS0)|ch_map[adc_ch_idx]; //AVCC as ref. right aligned
@@ -34,9 +34,9 @@ void AdcInit(void)
 }
 
 #ifdef SEND_ON_IRQ
-bool adc_checkSend(void) //this gives the main program 7.65 ms to do the calculations
+bool adc_checkSend(void) //this gives the main program 8.02 ms to do the calculations
 {
-	return (adc_ch_idx==(ADC_CHANEL_CNT/2) && (adc_samp_idx==2));
+	return (adc_ch_idx==3 && (adc_samp_idx==5));
 }
 #endif
 
@@ -87,7 +87,7 @@ void AdcCalc_avg(void)
 // Interrupt subroutine for ADC conversion complete , called when ADC conversion is done
 ISR(ADC_vect)
 {
-
+	adc_tick++;
 	if(adc_samp_idx==OVERSAMPLE_CNT)
 	{ //special case VBAT
 		adc_avg[ADC_CHANEL_CNT]=ADC;
@@ -116,6 +116,7 @@ ISR(ADC_vect)
 		//restart
 		adc_samp_idx=0;
 		adc_ch_idx=0;
+		adc_tick=0;
 	}
 	//select next channel
 	ADMUX=ch_map[adc_ch_idx]|(ADMUX&0xF0);

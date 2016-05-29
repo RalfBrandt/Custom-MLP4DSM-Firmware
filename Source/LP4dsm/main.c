@@ -96,6 +96,8 @@ void InitSystem(void)
 	CLKPR=0;
 	//turn WDT off
 	WDTCSR =0x00;
+	//init configuration
+	ConfigInit();
 	//configure ADC 
 	AdcInit();
 	//configure O/I
@@ -106,8 +108,6 @@ void InitSystem(void)
 	initTimer();
 	//configure timer 2 
 	InitBuzzer();
-	//init configuration
-	ConfigInit();
 	//configure USART 
 	tx_Init();
 	//enable interrupts
@@ -129,11 +129,11 @@ void InitSystem(void)
 	} while (n<5);
 }
 
+uint8_t bind=false;		//true if bind is selected
 
 int main(void)
 {
 	bool range_check=false;	//true if range check is activated
-	uint8_t bind=false;		//true if bind is selected
 	uint32_t keys;
 	uint32_t flightTimer=0;
 	

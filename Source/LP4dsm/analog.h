@@ -9,9 +9,8 @@
 #define ADC_MAX ((1<<(ADC_BITS))-1)
 #define ADC_MIN 0
 #define ADC_CENTER (1<<(ADC_BITS-1))
-#define UPDATE_RATE 22UL  //22ms6
-#define UPDATE_CNT  ((F_CPU*UPDATE_RATE)/1000) //ticks per 22ms
-#define ADC_UPDATE_INTERVAL  (UPDATE_CNT/(OVERSAMPLE_CNT*ADC_CHANEL_CNT+1)) //ticks per adc sample //one extra for VBAT
+#define ADC_UPDATE_INTERVAL11MS  (UPDATE_CNT11MS/(OVERSAMPLE_CNT*ADC_CHANEL_CNT+1)) //ticks per adc sample //one extra for VBAT
+#define ADC_UPDATE_INTERVAL22MS  (UPDATE_CNT22MS/(OVERSAMPLE_CNT*ADC_CHANEL_CNT+1)) //ticks per adc sample //one extra for VBAT
 //analog input channel map
 #define IN_LEFT_VERT_CH 0//IN_RV1_CH
 #define IN_LEFT_HRIZ_CH 1//IN_RV2_CH
@@ -33,10 +32,9 @@
 //prototypes ********************************************************************************
 void AdcInit(void);
 int16_t AdcGetChanel(uint8_t idx);
-bool adc_checkSend(void);
 //public data************************************************************************************
 extern volatile bool adc_new_data;
-
+extern uint8_t adc_tick;
 
 
 

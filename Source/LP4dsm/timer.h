@@ -10,7 +10,8 @@
 //global data
 extern volatile uint32_t sys_tick;
 
+
 //prototypes
 void initTimer(void);
-
+void TimerSetUpdateIntervall(void);
 #endif //TIMER
